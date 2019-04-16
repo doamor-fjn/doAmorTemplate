@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro do Doador</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
+    <ion-list>
+      <ion-item>
+        <!--Nome dado na validação do formulário (formControlName="name") nome dado no create-doador.ts da página  -->  
+        <ion-input type="text" placeholder="nome"
+        formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <!--Nome dado na validação do formulário (formControlName="email") nome dado no create-doador.ts da página  -->  
+        <ion-input type="email" placeholder="nome@email.com"
+        formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <!--Nome dado na validação do formulário (formControlName="password") nome dado no create-doador.ts da página  -->  
+        <ion-input type="password" placeholder="senha"
+        formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <!--Nome dado na validação do formulário (formControlName="passwordConfirm") nome dado no create-doador.ts da página  -->  
+        <ion-input type="password" placeholder="confirmar senha"
+        formControlName="passwordConfirm"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+        <!--Desabilita o botão de cadastrar caso o  formulario registerForm no create-doador.ts não seja atentido-->  
+        <button type="submit" ion-button [disabled]="registerForm.invalid">Cadastrar</button>
+    </div>
+  </form>
+</ion-content>
