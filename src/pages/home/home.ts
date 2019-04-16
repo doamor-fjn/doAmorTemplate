@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { IonicPage } from 'ionic-angular';
 
 // Imports do Firebase
 import { AngularFireAuth } from '@angular/fire/auth';
 
 // Imports do IonicStorage
 import { Storage } from '@ionic/storage';
+
+// Nomeia a página para redirecionamento
+@IonicPage({
+  name: 'home'
+})
 
 @Component({
   selector: 'page-home',

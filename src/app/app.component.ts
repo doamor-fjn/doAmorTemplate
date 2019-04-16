@@ -8,7 +8,7 @@ import { Storage } from '@ionic/storage';
 
 // Imports do Pagina Menu do Doador
 import { MenuDoadorPage } from '../pages/menu-doador/menu-doador';
-import { LoginPage } from '../pages/home/login;
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,13 +29,13 @@ export class MyApp {
         if (resolve.length >0) {
           this.rootPage = MenuDoadorPage
         } else {
-          // Caso tenha o usuario não ir para o login
-          this.rootPage = LoginPage
+          // Caso tenha o usuario não ir para o Home
+          this.rootPage = HomePage
         }
       })
-      // Caso tenha o usuario não ir para o login
+      // Caso tenha o usuario não ir para o Home
       .catch(() => {
-        this.rootPage = LoginPage;
+        this.rootPage = HomePage;
       })
       statusBar.styleDefault();
       splashScreen.hide();

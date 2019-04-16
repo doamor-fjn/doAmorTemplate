@@ -23,13 +23,14 @@ import { IonicStorageModule } from '@ionic/storage';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { MenuDoadorPageModule } from '../pages/menu-doador/menu-doador.module';
 import { MenuDoadorPage } from '../pages/menu-doador/menu-doador';
+import { HomePageModule } from '../pages/home/home.module';
 
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
+   // HomePage,
     TabsPage,
   ],
   imports: [
@@ -39,7 +40,8 @@ import { MenuDoadorPage } from '../pages/menu-doador/menu-doador';
     // Import IonicStorage
     IonicStorageModule.forRoot(),
     // Import MenuDoadorModulo
-    MenuDoadorPageModule
+    MenuDoadorPageModule,
+    HomePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
